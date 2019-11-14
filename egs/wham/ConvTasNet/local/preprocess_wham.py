@@ -42,12 +42,10 @@ def preprocess(inp_args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("WHAM data preprocessing")
-    parser.add_argument('--in-dir', type=str, default=None,
+    parser.add_argument('--in_dir', type=str, default=None,
                         help='Directory path of wham including tr, cv and tt')
-    parser.add_argument('--out-dir', type=str, default=None,
+    parser.add_argument('--out_dir', type=str, default=None,
                         help='Directory path to put output files')
-    parser.add_argument('--sample-rate', type=int, default=8000,
-                        help='Sample rate of audio file')
     args = parser.parse_args()
     print(args)
     preprocess(args)
