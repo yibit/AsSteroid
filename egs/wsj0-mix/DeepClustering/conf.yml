@@ -1,0 +1,33 @@
+# Filterbank config
+filterbank:
+  n_filters: 512
+  kernel_size: 256
+  stride: 128
+# Network config
+masknet:
+  n_blocks: 3
+  n_repeats: 2
+  mask_act: relu
+# Training config
+training:
+  epochs: 100
+  half_lr: yes
+  early_stop: yes
+  max_norm: 5
+  checkpoint: n
+  continue_from:
+# Optim config
+optim:
+  optimizer: adam
+  lr: 0.001
+  weight_decay: 0.
+# Data config
+data:
+  wav_id: list/wav_id
+  wav_base_path: data/2speakers/wav8k/min
+  nondefault_nsrc:
+  sample_rate: 8000
+  mode: min
+  batch_size: 3
+  num_workers: 4
+  segment: 4.0
